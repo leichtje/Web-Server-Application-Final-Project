@@ -18,12 +18,28 @@ namespace Web_Server_Application_Final_Project.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
+		public IActionResult Logan()
 		{
 			return View();
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Jonathon()
+        {
+            return View();
+        }
+
+		public IActionResult Cameras() 
+		{
+			return View();
+		}
+
+		public IActionResult Movies()
+		{
+			return View();
+		}
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

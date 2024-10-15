@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+* {
+    font: 16px Bernard MT Condensed,verdana;
+    /*background: #ff0000;
+    color: #258cfb;*/
+}
