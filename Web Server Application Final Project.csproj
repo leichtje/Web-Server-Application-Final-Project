@@ -9,13 +9,9 @@
 
   <ItemGroup>
     <Compile Remove="Views\Camera\**" />
-    <Compile Remove="Views\Movie\**" />
     <Content Remove="Views\Camera\**" />
-    <Content Remove="Views\Movie\**" />
     <EmbeddedResource Remove="Views\Camera\**" />
-    <EmbeddedResource Remove="Views\Movie\**" />
     <None Remove="Views\Camera\**" />
-    <None Remove="Views\Movie\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +21,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
   </ItemGroup>
 
 </Project>

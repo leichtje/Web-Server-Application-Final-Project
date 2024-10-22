@@ -1,16 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Web_Server_Application_Final_Project.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Web_Server_Application_Final_Project.Controllers
 {
+	
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> _logger;
+		private MovieContext context { get; set; }
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(MovieContext ctx)
 		{
-			_logger = logger;
+			context = ctx;
 		}
 
 		public IActionResult Index()
@@ -35,7 +37,9 @@ namespace Web_Server_Application_Final_Project.Controllers
 
 		public IActionResult Movies()
 		{
-			return View();
+			var movies = context.Movies.Include(m => m.Genre).OrderBy(
+			m => m.Name).ToList();
+			return View(movies);
 		}
 
         public IActionResult VideoGames()
