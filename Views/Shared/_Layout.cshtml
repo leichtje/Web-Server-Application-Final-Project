@@ -34,6 +34,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Movies">Movies</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="VideoGames">Video Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Place">PlaceHolder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="True">Do Not Click</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -44,6 +53,12 @@
             @RenderBody()
         </main>
     </div>
+
+    <footer class="footer text-black text-muted text-xxl-center fixed-bottom">
+        <div class="container">
+            &copy; 2024 - Freeman & Leicht - <a asp-area="" asp-controller="Home" asp-action="False">I Warned You Icarus</a> 
+        </div>
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

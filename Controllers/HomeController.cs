@@ -38,6 +38,26 @@ namespace Web_Server_Application_Final_Project.Controllers
 			return View();
 		}
 
+        public IActionResult VideoGames()
+        {
+            return View();
+        }
+
+        public IActionResult Place()
+        {
+            return View();
+        }
+
+        public IActionResult True()
+        {
+            return Redirect("https://youtu.be/dQw4w9WgXcQ?si=jculv-4M5s6_TeZl");
+        }
+
+        public IActionResult False()
+        {
+            return Redirect("https://www.youtube.com/watch?v=p7YXXieghto");
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
