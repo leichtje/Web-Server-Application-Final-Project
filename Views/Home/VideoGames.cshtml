@@ -6,3 +6,38 @@
     <h1 class="jumbotron">Favorite Video Games</h1>
     <p>This Page is to showcase a compilation of favorite video games.</p>
 </div>
+
+<div>
+<h2>Game List</h2>
+<a asp-controller="Game" asp-action="Add">Add New Game</a>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Year</th>
+			<th>Type</th>
+			<th>Rating</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var game in Model)
+		{
+			<tr>
+				<td>@game.Name</td>
+				<td>@game.Year</td>
+				<td>@game.Type.Name</td>
+				<td>@game.Rating</td>
+				<td>
+					<a asp-controller="Game" asp-action="Edit"
+					   asp-route-id="@game.GameId"
+					   asp-route-slug="@game.Slug">Edit</a>
+					<a asp-controller="Movie" asp-action="Delete"
+					   asp-route-id="@game.GameId"
+					   asp-route-slug="@game.Slug">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+</div>

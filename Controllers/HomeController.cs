@@ -8,12 +8,19 @@ namespace Web_Server_Application_Final_Project.Controllers
 	
 	public class HomeController : Controller
 	{
-		private MovieContext context { get; set; }
+     
 
-		public HomeController(MovieContext ctx)
+        private MovieContext context { get; set; }
+		private GameContext gameContext { get; set; }
+
+		public HomeController(MovieContext ctx,GameContext ctx1)
 		{
 			context = ctx;
-		}
+            gameContext = ctx1;
+
+        }
+
+
 
 		public IActionResult Index()
 		{
@@ -44,8 +51,11 @@ namespace Web_Server_Application_Final_Project.Controllers
 
         public IActionResult VideoGames()
         {
-            return View();
-        }
+			var games = gameContext.Games.Include(m => m.Type).OrderBy(
+			m => m.Name).ToList();
+			return View(games);
+
+		}
 
         public IActionResult Place()
         {

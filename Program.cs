@@ -9,8 +9,8 @@ builder.Services.AddDbContext<MovieContext>(
 //builder.Services.AddDbContext<CameraContext>(
 //    options => options.UseSqlServer(builder.Configuration.GetConnectionString("CameraContext")));
 
-//builder.Services.AddDbContext<GameContext>(
-//    options => options.UseSqlServer(builder.Configuration.GetConnectionString("GameContext")));
+builder.Services.AddDbContext<GameContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("GameContext")));
 
 //builder.Services.AddDbContext<PlaceContext>(
 //    options => options.UseSqlServer(builder.Configuration.GetConnectionString("PlaceContext")));
