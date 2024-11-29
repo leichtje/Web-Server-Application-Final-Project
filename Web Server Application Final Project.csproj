@@ -8,18 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Videogames\**" />
     <Compile Remove="Views\Camera\**" />
     <Compile Remove="Views\Places\**" />
+    <Content Remove="Models\Videogames\**" />
     <Content Remove="Views\Camera\**" />
     <Content Remove="Views\Places\**" />
+    <EmbeddedResource Remove="Models\Videogames\**" />
     <EmbeddedResource Remove="Views\Camera\**" />
     <EmbeddedResource Remove="Views\Places\**" />
+    <None Remove="Models\Videogames\**" />
     <None Remove="Views\Camera\**" />
     <None Remove="Views\Places\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Models\Cameras\CameraContext.cs" />
+    <Compile Remove="Models\GameContext.cs" />
     <Compile Remove="Models\Places\PlaceContext.cs" />
   </ItemGroup>
 
@@ -36,7 +41,7 @@
   <ItemGroup>
     <Folder Include="Models\Cameras\" />
     <Folder Include="Models\Places\" />
-    <Folder Include="Models\Videogames\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

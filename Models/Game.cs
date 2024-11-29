@@ -18,9 +18,9 @@ namespace Web_Server_Application_Final_Project.Models
         public int? Rating { get; set; }
 
         [Required(ErrorMessage = "Please Enter a Genre.")]
-        public string? TypeId { get; set; }
+        public string? TypesId { get; set; }
 
-        public Type? Type { get; set; }
+        public Types? Type { get; set; }
 
         public string Slug =>
             Name?.Replace(' ', '-').ToLower() + '-' +

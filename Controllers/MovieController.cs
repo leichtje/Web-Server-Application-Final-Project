@@ -5,8 +5,8 @@ namespace Web_Server_Application_Final_Project.Controllers
 {
     public class MovieController : Controller
     {
-        private MovieContext context { get; set; }
-        public MovieController(MovieContext ctx)
+        private FinalContext context { get; set; }
+        public MovieController(FinalContext ctx)
         {
             context = ctx;
         }

@@ -9,18 +9,18 @@ namespace Web_Server_Application_Final_Project.Models
         }
 
         public DbSet<Game> Games { get; set; }
-        public DbSet<Type> Types { get; set; }
+        public DbSet<Types> Types { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Type>().HasData(
-        new Type { TypeId = "F", Name = "First Person" },
-        new Type { TypeId = "M", Name = "MMO" },
-        new Type { TypeId = "T", Name = "Third Person" },
-		new Type { TypeId = "S", Name = "Shooter" },
-		new Type { TypeId = "R", Name = "RPG" },
-		new Type { TypeId = "P", Name = "Puzzle" }
+            modelBuilder.Entity<Types>().HasData(
+        new Types { TypesId = "F", Name = "First Person" },
+        new Types { TypesId = "M", Name = "MMO" },
+        new Types { TypesId = "T", Name = "Third Person" },
+		new Types { TypesId = "S", Name = "Shooter" },
+		new Types { TypesId = "R", Name = "RPG" },
+		new Types { TypesId = "P", Name = "Puzzle" }
         );
             modelBuilder.Entity<Game>().HasData(
         new Game
@@ -29,7 +29,7 @@ namespace Web_Server_Application_Final_Project.Models
             Name = "Medal of Honor Frontline",
             Year = 2002,
             Rating = 5,
-            TypeId = "S"
+            TypesId = "S"
         }
 
     );

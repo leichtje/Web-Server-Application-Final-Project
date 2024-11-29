@@ -3,7 +3,6 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web_Server_Application_Final_Project.Models;
 
@@ -11,12 +10,10 @@ using Web_Server_Application_Final_Project.Models;
 
 namespace Web_Server_Application_Final_Project.Migrations
 {
-    [DbContext(typeof(MovieContext))]
-    [Migration("20241022152458_Genre")]
-    partial class Genre
+    [DbContext(typeof(FinalContext))]
+    partial class FinalContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,6 +21,47 @@ namespace Web_Server_Application_Final_Project.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Web_Server_Application_Final_Project.Models.Game", b =>
+                {
+                    b.Property<int>("GameId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GameId"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Rating")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<string>("TypesId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("Year")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.HasKey("GameId");
+
+                    b.HasIndex("TypesId");
+
+                    b.ToTable("Games");
+
+                    b.HasData(
+                        new
+                        {
+                            GameId = 1,
+                            Name = "Medal of Honor Frontline",
+                            Rating = 5,
+                            TypesId = "S",
+                            Year = 2002
+                        });
+                });
 
             modelBuilder.Entity("Web_Server_Application_Final_Project.Models.Genre", b =>
                 {
@@ -114,6 +152,62 @@ namespace Web_Server_Application_Final_Project.Migrations
                             Rating = 5,
                             Year = 2012
                         });
+                });
+
+            modelBuilder.Entity("Web_Server_Application_Final_Project.Models.Types", b =>
+                {
+                    b.Property<string>("TypesId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TypesId");
+
+                    b.ToTable("Types");
+
+                    b.HasData(
+                        new
+                        {
+                            TypesId = "F",
+                            Name = "First Person"
+                        },
+                        new
+                        {
+                            TypesId = "M",
+                            Name = "MMO"
+                        },
+                        new
+                        {
+                            TypesId = "T",
+                            Name = "Third Person"
+                        },
+                        new
+                        {
+                            TypesId = "S",
+                            Name = "Shooter"
+                        },
+                        new
+                        {
+                            TypesId = "R",
+                            Name = "RPG"
+                        },
+                        new
+                        {
+                            TypesId = "P",
+                            Name = "Puzzle"
+                        });
+                });
+
+            modelBuilder.Entity("Web_Server_Application_Final_Project.Models.Game", b =>
+                {
+                    b.HasOne("Web_Server_Application_Final_Project.Models.Types", "Type")
+                        .WithMany()
+                        .HasForeignKey("TypesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Type");
                 });
 
             modelBuilder.Entity("Web_Server_Application_Final_Project.Models.Movie", b =>

@@ -5,10 +5,10 @@ namespace Web_Server_Application_Final_Project.Controllers
 {
     public class GameController : Controller
     {
-        private GameContext context { get; set; }
-        public GameController(GameContext ctx1)
+        private  FinalContext context { get; set; }
+        public GameController(FinalContext ctx)
         {
-            context = ctx1;
+            context = ctx;
         }
 
         [HttpGet]
@@ -24,7 +24,7 @@ namespace Web_Server_Application_Final_Project.Controllers
         public IActionResult Edit(int id)
         {
             ViewBag.Action = "Edit";
-            ViewBag.Genres
+            ViewBag.Types
                 = context.Types.OrderBy(g => g.Name).ToList();
             var game = context.Games.Find(id);
             return View(game);

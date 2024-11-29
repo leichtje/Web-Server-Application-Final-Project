@@ -1,8 +1,8 @@
 ﻿namespace Web_Server_Application_Final_Project.Models
 {
-    public class Type
+    public class Types
     {
-        public string? TypeId { get; set; }
+        public string? TypesId { get; set; }
         public string? Name { get; set; }
     }
 }

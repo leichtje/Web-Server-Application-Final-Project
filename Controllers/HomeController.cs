@@ -10,14 +10,12 @@ namespace Web_Server_Application_Final_Project.Controllers
 	{
      
 
-        private MovieContext context { get; set; }
-		private GameContext gameContext { get; set; }
+        private FinalContext context { get; set; }
+		//private GameContext gameContext { get; set; }
 
-		public HomeController(MovieContext ctx,GameContext ctx1)
+		public HomeController(FinalContext ctx)
 		{
 			context = ctx;
-            gameContext = ctx1;
-
         }
 
 
@@ -51,7 +49,7 @@ namespace Web_Server_Application_Final_Project.Controllers
 
         public IActionResult VideoGames()
         {
-			var games = gameContext.Games.Include(m => m.Type).OrderBy(
+			var games = context.Games.Include(m => m.Type).OrderBy(
 			m => m.Name).ToList();
 			return View(games);
 
