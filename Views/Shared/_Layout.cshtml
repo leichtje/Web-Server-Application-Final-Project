@@ -20,34 +20,45 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logan">Logan</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Logan">Logan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Jonathon">Jonathon</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Jonathon">Jonathon</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cameras">Cameras</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Cameras">Cameras</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Movies">Movies</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Movies">Movies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="VideoGames">Video Games</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="VideoGames">Video Games</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Place">Locations</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Place">Locations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="True">Do Not Click</a>
+                            <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="True">Do Not Click</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <script>
+        document.querySelectorAll('.async-btn').forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                this.classList.add('loading');
+
+                window.location.href = this.href;
+
+                event.preventDefault();
+            });
+        });
+    </script>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
