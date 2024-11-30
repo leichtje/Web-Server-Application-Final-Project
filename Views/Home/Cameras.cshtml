@@ -6,10 +6,9 @@
     <div class="text-center">
         <h1 class="jumbotron">Favorite Cameras</h1>
         <p>This Page is to showcase a compilation of Logan's Favorite Cameras.</p>
-    </div>
 
-    <div class="content">
-		<pre style="font-size:5px; font-weight: bold; font-family: 'Source Code Pro';"> 
+		<div class="content">
+		<pre class="divider" style="font-size:5px; font-weight: bold; font-family: 'Source Code Pro';"> 
             ↑↑↑↑↑↑↑↑↑      
     ↑↑↑   ↑↑↑↑↑↑↑↑↑↑↑↑↑    
 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
@@ -22,38 +21,39 @@
 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 		</pre>
 
-	<h2>Camera List</h2>
-	<a asp-controller="Camera" asp-action="Add">Add New Camera</a>
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th>Make / Model</th>
-				<th>Year</th>
-				<th>Sensor</th>
-				<th>Description</th>
-				<th>Rating</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var camera in Model)
-			{
+		<h2>Camera List</h2>
+		<a asp-controller="Camera" asp-action="Add">Add New Camera</a>
+		<table class="table table-bordered table-striped">
+			<thead>
 				<tr>
-					<td>@camera.Name</td>
-					<td>@camera.Year</td>
-					<td>@camera.Sensor</td>
-					<td>@camera.Description</td>
-					<td>@camera.Rating</td>
-					<td>
-						<a asp-controller="camera" asp-action="Edit"
-						   asp-route-id="@camera.CameraId"
-						   asp-route-slug="@camera.Slug">Edit</a>
-						<a asp-controller="camera" asp-action="Delete"
-						   asp-route-id="@camera.CameraId"
-						   asp-route-slug="@camera.Slug">Delete</a>
-					</td>
+					<th>Make / Model</th>
+					<th>Year</th>
+					<th>Sensor</th>
+					<th>Description</th>
+					<th>Rating</th>
+					<th></th>
 				</tr>
-				}
-			</tbody>
-		</table>
-    </div>
+			</thead>
+			<tbody>
+				@foreach (var camera in Model)
+				{
+					<tr>
+						<td>@camera.Name</td>
+						<td>@camera.Year</td>
+						<td>@camera.Sensor</td>
+						<td>@camera.Description</td>
+						<td>@camera.Rating</td>
+						<td>
+							<a asp-controller="camera" asp-action="Edit"
+							   asp-route-id="@camera.CameraId"
+							   asp-route-slug="@camera.Slug">Edit</a>
+							<a asp-controller="camera" asp-action="Delete"
+							   asp-route-id="@camera.CameraId"
+							   asp-route-slug="@camera.Slug">Delete</a>
+						</td>
+					</tr>
+					}
+				</tbody>
+			</table>
+	</div>
+</div>
