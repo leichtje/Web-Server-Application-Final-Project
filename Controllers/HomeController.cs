@@ -22,7 +22,8 @@ namespace Web_Server_Application_Final_Project.Controllers
 
 		public IActionResult Index()
 		{
-			return View();
+            ViewData["Title"] = "Home Page";
+            return View();
 		}
 
 		public IActionResult Logan()

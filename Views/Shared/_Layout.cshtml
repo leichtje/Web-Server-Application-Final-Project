@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Web_Server_Application_Final_Project
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -17,33 +21,34 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class=" collapse d-sm-inline-flex" style="display:left">
+                <div class="collapse d-sm-inline-flex" style="display:left">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "Logan" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Logan">Logan</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "Jonathon" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Jonathon">Jonathon</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "Cameras" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Cameras">Cameras</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "Movies" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Movies">Movies</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "VideoGames" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="VideoGames">Video Games</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "Place" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="Place">Locations</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["action"].ToString() == "True" ? "active" : "")">
                             <a class="nav-link text-dark async-btn" asp-area="" asp-controller="Home" asp-action="True">Do Not Click</a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -58,6 +63,7 @@
                 event.preventDefault();
             });
         });
+
     </script>
     <div class="container">
         <main role="main" class="pb-3">

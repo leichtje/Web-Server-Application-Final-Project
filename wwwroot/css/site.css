@@ -22,6 +22,12 @@ body {
     font-family: system-ui;
 }
 
+img {
+    border: 2px solid #9de1f5;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
 .content {
     font-size: 20px;
     text-align: center;
@@ -51,6 +57,14 @@ body {
     color: #0a3145;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
     font-weight: bold;
+}
+
+.nav-item.active {
+    box-shadow: none !important;
+}
+.nav-item.active .nav-link {
+    box-shadow: none !important;
+    background-color: #ededed;
 }
 
 .footer {
@@ -84,27 +98,24 @@ body {
 
 .async-btn.loading {
     box-shadow: none !important;
-    border: 2px solid #9de1f5;
-    animation: pulse 1s infinite;
+    /*border: 2px solid #9de1f5;*/
+    background-color: #9de1f5;
     font-weight: bold;
+    animation: pulse 1s infinite;
 }
 
 @keyframes pulse {
     0% {
-        border-color: White;
+        background-color: White;
     }
 
     50% {
-        border-color: #9de1f5;
+        background-color: #9de1f5;
     }
 
     100% {
-        border-color: White;
+        background-color: White;
     }
 }
 
-img {
-    border: 2px solid #9de1f5;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-}
+
