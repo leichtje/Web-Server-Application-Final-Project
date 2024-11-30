@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Location>
+@{
     ViewData["Title"] = "Placeholder";
 }
 
@@ -22,5 +23,40 @@
          ↑↑         
                 </pre>
     </div>
+
+	<h2>Location List</h2>
+	<a asp-controller="Location" asp-action="Add">Add New Location</a>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>City/State</th>
+				<th>Year Established</th>
+				<th>Description</th>
+				<th>Rating</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var location in Model)
+			{
+				<tr>
+					<td>@location.Name</td>
+					<td>@location.Descriptor</td>
+					<td>@location.Year</td>
+					<td>@location.Description</td>
+					<td>@location.Rating</td>
+					<td>
+						<a asp-controller="Location" asp-action="Edit"
+						   asp-route-id="@location.LocationId"
+						   asp-route-slug="@location.Slug">Edit</a>
+						<a asp-controller="Location" asp-action="Delete"
+						   asp-route-id="@location.LocationId"
+						   asp-route-slug="@location.Slug">Delete</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
 
 </div>

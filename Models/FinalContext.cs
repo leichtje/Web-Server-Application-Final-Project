@@ -14,6 +14,9 @@ namespace Web_Server_Application_Final_Project.Models
         public DbSet<Game> Games { get; set; }
         public DbSet<Types> Types { get; set; }
 
+        public DbSet<Location> Locations { get; set; }
+       
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -58,6 +61,20 @@ namespace Web_Server_Application_Final_Project.Models
         }
 
     );
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Location>().HasData(
+        new Location
+        {
+            LocationId = 1,
+            Name = "Clingmans Dome",
+            Descriptor = "Bryson City, North Carolina",
+            Year = 1959,
+            Description = "The highest peak in the Great Smoky Mountains, offering breathtaking panoramic views.",
+            Rating = 1
+        }
+        );
+
         }
     }
 }

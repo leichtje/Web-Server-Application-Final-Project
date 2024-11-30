@@ -11,7 +11,7 @@ namespace Web_Server_Application_Final_Project.Controllers
      
 
         private FinalContext context { get; set; }
-		//private GameContext gameContext { get; set; }
+		
 
 		public HomeController(FinalContext ctx)
 		{
@@ -57,7 +57,9 @@ namespace Web_Server_Application_Final_Project.Controllers
 
         public IActionResult Place()
         {
-            return View();
+            var locations = context.Locations.OrderBy(l => l.Rating).ToList();
+
+            return View(locations);
         }
 
         public IActionResult True()
