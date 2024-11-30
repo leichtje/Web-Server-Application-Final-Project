@@ -15,7 +15,9 @@ namespace Web_Server_Application_Final_Project.Models
         public DbSet<Types> Types { get; set; }
 
         public DbSet<Location> Locations { get; set; }
-       
+
+        public DbSet<Camera> Cameras { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -72,6 +74,19 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 1959,
             Description = "The highest peak in the Great Smoky Mountains, offering breathtaking panoramic views.",
             Rating = 1
+        }
+        );
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Camera>().HasData(
+        new Camera
+        {
+            CameraId = 1,
+            Name = "Nikon z6",
+            Year = 1959,
+            Sensor = "24.5MP Full Frame",
+            Description = "A mirrorless- type camera. My most recent camera.",
+            Rating = 2
         }
         );
 

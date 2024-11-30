@@ -37,8 +37,9 @@ namespace Web_Server_Application_Final_Project.Controllers
 
 		public IActionResult Cameras() 
 		{
-			return View();
-		}
+            var cameras = context.Cameras.OrderBy(c => c.Rating).ToList();
+            return View(cameras);
+        }
 
 		public IActionResult Movies()
 		{
@@ -58,7 +59,6 @@ namespace Web_Server_Application_Final_Project.Controllers
         public IActionResult Place()
         {
             var locations = context.Locations.OrderBy(l => l.Rating).ToList();
-
             return View(locations);
         }
 

@@ -1,21 +1,6 @@
-﻿@* CHANGE FILE
-
-
-*@
-
- <!--CHANGE FILE 
-
- CHANGE FILE
-
-
-        
-      
- -->
-
-
-@model Movie
+﻿@model Camera
 @{
-	string title = ViewBag.Action + " Movie";
+	string title = ViewBag.Action + " Camera";
 	ViewBag.Title = title;
 }
 
@@ -27,7 +12,7 @@
 	</div>
 
 	<div class="form-group">
-		<label asp-for="Name">Name</label>
+		<label asp-for="Name">Make / Model</label>
 		<input asp-for="Name" class="form-control">
 	</div>
 
@@ -37,17 +22,13 @@
 	</div>
 
 	<div class="form-group">
-		<label asp-for="GenreId">Genre</label>
-		<select asp-for="GenreId" class="form-control">
-			<option value="">Select a Genre</option>
+		<label asp-for="Sensor">Sensor</label>
+		<input asp-for="Sensor" class="form-control">
+	</div>
 
-			@foreach (Genre g in ViewBag.Genres)
-			{
-				<option value="@g.GenreId">
-					@g.Name
-				</option>
-			}
-		</select>
+	<div class="form-group">
+		<label asp-for="Description">Description</label>
+		<input asp-for="Description" class="form-control">
 	</div>
 
 	<div class="form-group">
@@ -55,7 +36,7 @@
 		<input asp-for="Rating" class="form-control">
 	</div>
 
-	<input type="hidden" asp-for="MovieId" />
+	<input type="hidden" asp-for="CameraId" />
 
 	<button type="submit" class="btn btn-primary">
 		@ViewBag.Action

@@ -9,16 +9,12 @@
 
   <ItemGroup>
     <Compile Remove="Models\Videogames\**" />
-    <Compile Remove="Views\Camera\**" />
     <Compile Remove="Views\Places\**" />
     <Content Remove="Models\Videogames\**" />
-    <Content Remove="Views\Camera\**" />
     <Content Remove="Views\Places\**" />
     <EmbeddedResource Remove="Models\Videogames\**" />
-    <EmbeddedResource Remove="Views\Camera\**" />
     <EmbeddedResource Remove="Views\Places\**" />
     <None Remove="Models\Videogames\**" />
-    <None Remove="Views\Camera\**" />
     <None Remove="Views\Places\**" />
   </ItemGroup>
 
