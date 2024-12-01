@@ -12,8 +12,8 @@ using Web_Server_Application_Final_Project.Models;
 namespace Web_Server_Application_Final_Project.Migrations
 {
     [DbContext(typeof(FinalContext))]
-    [Migration("20241130043846_Camera")]
-    partial class Camera
+    [Migration("20241201142634_Initil")]
+    partial class Initil
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,10 +62,37 @@ namespace Web_Server_Application_Final_Project.Migrations
                         {
                             CameraId = 1,
                             Description = "A mirrorless- type camera. My most recent camera.",
-                            Name = "Nikon z6",
-                            Rating = 2,
+                            Name = "Nikon Z6",
+                            Rating = 1,
                             Sensor = "24.5MP Full Frame",
-                            Year = 1959
+                            Year = 2018
+                        },
+                        new
+                        {
+                            CameraId = 2,
+                            Description = "A Camera",
+                            Name = "Nikon Z9",
+                            Rating = 2,
+                            Sensor = "45.7MP Full Frame",
+                            Year = 2021
+                        },
+                        new
+                        {
+                            CameraId = 3,
+                            Description = "A DSLR-type camera. My second camera.",
+                            Name = "Nikon d5500",
+                            Rating = 3,
+                            Sensor = "24.2MP Crop Size",
+                            Year = 2015
+                        },
+                        new
+                        {
+                            CameraId = 4,
+                            Description = "A DSLR-type camera. My first camera.",
+                            Name = "Nikon d3000",
+                            Rating = 4,
+                            Sensor = "10.2MP Crop Size",
+                            Year = 2007
                         });
                 });
 
@@ -107,6 +134,22 @@ namespace Web_Server_Application_Final_Project.Migrations
                             Rating = 5,
                             TypesId = "S",
                             Year = 2002
+                        },
+                        new
+                        {
+                            GameId = 2,
+                            Name = "Far Cry 6",
+                            Rating = 5,
+                            TypesId = "F",
+                            Year = 2021
+                        },
+                        new
+                        {
+                            GameId = 3,
+                            Name = "Call of Duty Black Ops 2",
+                            Rating = 5,
+                            TypesId = "S",
+                            Year = 2012
                         });
                 });
 
@@ -201,6 +244,78 @@ namespace Web_Server_Application_Final_Project.Migrations
                             Name = "Clingmans Dome",
                             Rating = 1,
                             Year = 1959
+                        },
+                        new
+                        {
+                            LocationId = 2,
+                            Description = "A charming town in Tennessee nestled in the Smoky Mountains, renowned for its attractions, shopping, and natural beauty.",
+                            Descriptor = "Gatlinburg, Tennessee",
+                            Name = "Gatlinburg",
+                            Rating = 2,
+                            Year = 1854
+                        },
+                        new
+                        {
+                            LocationId = 3,
+                            Description = "One of the world's most famous natural wonders, with its powerful and majestic waterfalls.",
+                            Descriptor = "Niagara Falls,New York",
+                            Name = "Niagara Falls",
+                            Rating = 3,
+                            Year = 1678
+                        },
+                        new
+                        {
+                            LocationId = 4,
+                            Description = "This Ohio state park is renowned for its stunning natural features including cliffs, waterfalls, and lush forest trails.",
+                            Descriptor = "Logan, Ohio",
+                            Name = "Hocking Hills State Park",
+                            Rating = 4,
+                            Year = 1924
+                        },
+                        new
+                        {
+                            LocationId = 5,
+                            Description = "Indiana's largest state park, known for its rolling hills, scenic vistas, and vibrant fall foliage.",
+                            Descriptor = "Nashville, Indiana",
+                            Name = "Brown County State Park",
+                            Rating = 5,
+                            Year = 1929
+                        },
+                        new
+                        {
+                            LocationId = 6,
+                            Description = "This museum showcases an extensive collection of historic aircraft and aviation artifacts.",
+                            Descriptor = "Dayton, Ohio",
+                            Name = "Museum of the Air Force",
+                            Rating = 6,
+                            Year = 1923
+                        },
+                        new
+                        {
+                            LocationId = 7,
+                            Description = "A historic cemetery and arboretum celebrated for its beautiful landscapes and monuments.",
+                            Descriptor = "Cincinnati, Ohio",
+                            Name = "Spring Grove",
+                            Rating = 7,
+                            Year = 1845
+                        },
+                        new
+                        {
+                            LocationId = 8,
+                            Description = "A popular destination for boating, fishing, and camping, surrounded by lush forests.",
+                            Descriptor = "Brookville, Indiana",
+                            Name = "Brookville Lake",
+                            Rating = 8,
+                            Year = 1974
+                        },
+                        new
+                        {
+                            LocationId = 9,
+                            Description = "This park offers picturesque hiking trails, fishing, and recreational activities.",
+                            Descriptor = "Harrison, Ohio",
+                            Name = "Miami Whitewater Forest",
+                            Rating = 9,
+                            Year = 1949
                         });
                 });
 
@@ -242,6 +357,30 @@ namespace Web_Server_Application_Final_Project.Migrations
                             Name = "Kingsman",
                             Rating = 5,
                             Year = 2012
+                        },
+                        new
+                        {
+                            MovieId = 2,
+                            GenreId = "A",
+                            Name = "Batman Begins",
+                            Rating = 5,
+                            Year = 2005
+                        },
+                        new
+                        {
+                            MovieId = 3,
+                            GenreId = "M",
+                            Name = "The Sound of Music",
+                            Rating = 5,
+                            Year = 2065
+                        },
+                        new
+                        {
+                            MovieId = 4,
+                            GenreId = "D",
+                            Name = "Hacksaw Ridge",
+                            Rating = 5,
+                            Year = 2016
                         });
                 });
 
