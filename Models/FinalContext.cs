@@ -198,7 +198,7 @@ namespace Web_Server_Application_Final_Project.Models
             Name = "Nikon Z6",
             Year = 2018,
             Sensor = "24.5MP Full Frame",
-            Description = "A mirrorless- type camera. My most recent camera.",
+            Description = "A mirrorless-type camera. My most recent camera.",
             Rating = 1
         },
         new Camera
@@ -207,7 +207,7 @@ namespace Web_Server_Application_Final_Project.Models
             Name = "Nikon Z9",
             Year = 2021,
             Sensor = "45.7MP Full Frame",
-            Description = "A Camera",
+            Description = "A mirrorless-type camera. I have tested a few times.",
             Rating = 2
         },
         new Camera
