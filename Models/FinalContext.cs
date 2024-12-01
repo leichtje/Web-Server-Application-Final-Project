@@ -39,6 +39,30 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 2012,
             Rating = 5,
             GenreId = "A"
+        },
+        new Movie
+        {
+            MovieId = 2,
+            Name = "Batman Begins",
+            Year = 2005,
+            Rating = 5,
+            GenreId = "A"
+        },
+        new Movie
+        {
+            MovieId = 3,
+            Name = "The Sound of Music",
+            Year = 2065,
+            Rating = 5,
+            GenreId = "M"
+        },
+        new Movie
+        {
+            MovieId = 4,
+            Name = "Hacksaw Ridge",
+            Year = 2016,
+            Rating = 5,
+            GenreId = "D"
         }
 
     );
@@ -60,6 +84,22 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 2002,
             Rating = 5,
             TypesId = "S"
+        },
+        new Game
+        {
+            GameId = 2,
+            Name = "Far Cry 6",
+            Year = 2021,
+            Rating = 5,
+            TypesId = "F"
+        },
+        new Game
+        {
+            GameId = 3,
+            Name = "Call of Duty Black Ops 2",
+            Year = 2012,
+            Rating = 5,
+            TypesId = "S"
         }
 
     );
@@ -74,7 +114,80 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 1959,
             Description = "The highest peak in the Great Smoky Mountains, offering breathtaking panoramic views.",
             Rating = 1
+        },
+        new Location
+        {
+            LocationId = 2,
+            Name = "Gatlinburg",
+            Descriptor = "Gatlinburg, Tennessee",
+            Year = 1854,
+            Description = "A charming town in Tennessee nestled in the Smoky Mountains, renowned for its attractions, shopping, and natural beauty.",
+            Rating = 2
+        },
+        new Location
+        {
+            LocationId = 3,
+            Name = "Niagara Falls",
+            Descriptor = "Niagara Falls,New York",
+            Year = 1678,
+            Description = "One of the world's most famous natural wonders, with its powerful and majestic waterfalls.",
+            Rating = 3
+        },
+        new Location
+        {
+            LocationId = 4,
+            Name = "Hocking Hills State Park",
+            Descriptor = "Logan, Ohio",
+            Year = 1924,
+            Description = "This Ohio state park is renowned for its stunning natural features including cliffs, waterfalls, and lush forest trails.",
+            Rating = 4
+        },
+        new Location
+        {
+            LocationId = 5,
+            Name = "Brown County State Park",
+            Descriptor = "Nashville, Indiana",
+            Year = 1929,
+            Description = "Indiana's largest state park, known for its rolling hills, scenic vistas, and vibrant fall foliage.",
+            Rating = 5
+        },
+        new Location
+        {
+            LocationId = 6,
+            Name = "Museum of the Air Force",
+            Descriptor = "Dayton, Ohio",
+            Year = 1923,
+            Description = "This museum showcases an extensive collection of historic aircraft and aviation artifacts.",
+            Rating = 6
+        },
+        new Location
+        {
+            LocationId = 7,
+            Name = "Spring Grove",
+            Descriptor = "Cincinnati, Ohio",
+            Year = 1845,
+            Description = "A historic cemetery and arboretum celebrated for its beautiful landscapes and monuments.",
+            Rating = 7
+        },
+        new Location
+        {
+            LocationId = 8,
+            Name = "Brookville Lake",
+            Descriptor = "Brookville, Indiana",
+            Year = 1974,
+            Description = "A popular destination for boating, fishing, and camping, surrounded by lush forests.",
+            Rating = 8
+        },
+        new Location
+        {
+            LocationId = 9,
+            Name = "Miami Whitewater Forest",
+            Descriptor = "Harrison, Ohio",
+            Year = 1949,
+            Description = "This park offers picturesque hiking trails, fishing, and recreational activities.",
+            Rating = 9
         }
+
         );
 
             base.OnModelCreating(modelBuilder);
@@ -86,7 +199,34 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 2018,
             Sensor = "24.5MP Full Frame",
             Description = "A mirrorless- type camera. My most recent camera.",
+            Rating = 1
+        },
+        new Camera
+        {
+            CameraId = 2,
+            Name = "Nikon Z9",
+            Year = 2021,
+            Sensor = "45.7MP Full Frame",
+            Description = "A Camera",
             Rating = 2
+        },
+        new Camera
+        {
+            CameraId = 3,
+            Name = "Nikon d5500",
+            Year = 2015,
+            Sensor = "24.2MP Crop Size",
+            Description = "A DSLR-type camera. My second camera.",
+            Rating = 3
+        },
+        new Camera
+        {
+            CameraId = 4,
+            Name = "Nikon d3000",
+            Year = 2007,
+            Sensor = "10.2MP Crop Size",
+            Description = "A DSLR-type camera. My first camera.",
+            Rating = 4
         }
         );
 
