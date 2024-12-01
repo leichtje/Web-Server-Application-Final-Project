@@ -60,6 +60,7 @@ img {
     color: #0a3145;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .nav-item.active {
@@ -90,6 +91,7 @@ img {
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
 }
 
 .btn-content:hover {
@@ -120,4 +122,11 @@ img {
     }
 }
 
+thead {
+    background-color: #f0fafc;
+}
+
+thead, tbody {
+    border: 2px solid #9de1f5;
+}
 
