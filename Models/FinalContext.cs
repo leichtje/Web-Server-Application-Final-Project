@@ -82,7 +82,7 @@ namespace Web_Server_Application_Final_Project.Models
         new Camera
         {
             CameraId = 1,
-            Name = "Nikon z6",
+            Name = "Nikon Z6",
             Year = 2018,
             Sensor = "24.5MP Full Frame",
             Description = "A mirrorless- type camera. My most recent camera.",
