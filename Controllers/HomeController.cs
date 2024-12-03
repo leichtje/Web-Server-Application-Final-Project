@@ -63,11 +63,6 @@ namespace Web_Server_Application_Final_Project.Controllers
             return View(locations);
         }
 
-        public IActionResult True()
-        {
-            return Redirect("https://youtu.be/dQw4w9WgXcQ?si=jculv-4M5s6_TeZl");
-        }
-
         public IActionResult False()
         {
             return Redirect("https://www.youtube.com/watch?v=p7YXXieghto");
