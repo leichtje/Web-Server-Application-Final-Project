@@ -39,7 +39,7 @@ namespace Web_Server_Application_Final_Project.Controllers
 
 
         [Route("/Admin/Place")]
-        public IActionResult Place()
+        public IActionResult PlaceAdmin()
         {
             var locations = context.Locations.OrderBy(l => l.Rating).ToList();
             return View(locations);
