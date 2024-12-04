@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Game>
+@{
     ViewData["Title"] = "Video Games";
 }
 
@@ -48,7 +49,7 @@
 							<a asp-controller="Game" asp-action="Edit"
 							   asp-route-id="@game.GameId"
 							   asp-route-slug="@game.Slug">Edit</a>
-							<a asp-controller="Movie" asp-action="Delete"
+							<a asp-controller="Game" asp-action="Delete"
 							   asp-route-id="@game.GameId"
 							   asp-route-slug="@game.Slug">Delete</a>
 						</td>
