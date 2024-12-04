@@ -52,7 +52,7 @@ namespace Web_Server_Application_Final_Project.Models
         {
             MovieId = 3,
             Name = "The Sound of Music",
-            Year = 2065,
+            Year = 1965,
             Rating = 5,
             GenreId = "M"
         },
@@ -63,6 +63,30 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 2016,
             Rating = 5,
             GenreId = "D"
+        },
+        new Movie
+        {
+            MovieId = 5,
+            Name = "Back to the Future 2",
+            Year = 1989,
+            Rating = 3,
+            GenreId = "S"
+        },
+        new Movie
+        {
+            MovieId = 6,
+            Name = "DeadPool and Wolverine",
+            Year = 2024,
+            Rating = 5,
+            GenreId = "R"
+        },
+        new Movie
+        {
+            MovieId = 7,
+            Name = "Saw",
+            Year = 2004,
+            Rating = 5,
+            GenreId = "H"
         }
 
     );
@@ -100,8 +124,39 @@ namespace Web_Server_Application_Final_Project.Models
             Year = 2012,
             Rating = 5,
             TypesId = "S"
+        },
+        new Game
+        {
+            GameId = 4,
+            Name = "HellDivers 2",
+            Year = 2024,
+            Rating = 4,
+            TypesId = "T"
+        },
+        new Game
+        {
+            GameId = 5,
+            Name = "God of War",
+            Year = 2018,
+            Rating = 5,
+            TypesId = "R"
+        },
+        new Game
+        {
+            GameId = 6,
+            Name = "Infamous",
+            Year = 2010,
+            Rating = 4,
+            TypesId = "T"
+        },
+        new Game
+        {
+            GameId = 7,
+            Name = "The Last of Us",
+            Year = 2014,
+            Rating = 4,
+            TypesId = "R"
         }
-
     );
 
             base.OnModelCreating(modelBuilder);

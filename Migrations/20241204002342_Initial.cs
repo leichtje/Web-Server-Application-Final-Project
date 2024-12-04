@@ -7,7 +7,7 @@
 namespace Web_Server_Application_Final_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class Initil : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -119,8 +119,8 @@ namespace Web_Server_Application_Final_Project.Migrations
                 columns: new[] { "CameraId", "Description", "Name", "Rating", "Sensor", "Year" },
                 values: new object[,]
                 {
-                    { 1, "A mirrorless- type camera. My most recent camera.", "Nikon Z6", 1, "24.5MP Full Frame", 2018 },
-                    { 2, "A Camera", "Nikon Z9", 2, "45.7MP Full Frame", 2021 },
+                    { 1, "A mirrorless-type camera. My most recent camera.", "Nikon Z6", 1, "24.5MP Full Frame", 2018 },
+                    { 2, "A mirrorless-type camera. I have tested a few times.", "Nikon Z9", 2, "45.7MP Full Frame", 2021 },
                     { 3, "A DSLR-type camera. My second camera.", "Nikon d5500", 3, "24.2MP Crop Size", 2015 },
                     { 4, "A DSLR-type camera. My first camera.", "Nikon d3000", 4, "10.2MP Crop Size", 2007 }
                 });
@@ -175,7 +175,11 @@ namespace Web_Server_Application_Final_Project.Migrations
                 {
                     { 1, "Medal of Honor Frontline", 5, "S", 2002 },
                     { 2, "Far Cry 6", 5, "F", 2021 },
-                    { 3, "Call of Duty Black Ops 2", 5, "S", 2012 }
+                    { 3, "Call of Duty Black Ops 2", 5, "S", 2012 },
+                    { 4, "HellDivers 2", 4, "T", 2024 },
+                    { 5, "God of War", 5, "R", 2018 },
+                    { 6, "Infamous", 4, "T", 2010 },
+                    { 7, "The Last of Us", 4, "R", 2014 }
                 });
 
             migrationBuilder.InsertData(
@@ -185,8 +189,11 @@ namespace Web_Server_Application_Final_Project.Migrations
                 {
                     { 1, "A", "Kingsman", 5, 2012 },
                     { 2, "A", "Batman Begins", 5, 2005 },
-                    { 3, "M", "The Sound of Music", 5, 2065 },
-                    { 4, "D", "Hacksaw Ridge", 5, 2016 }
+                    { 3, "M", "The Sound of Music", 5, 1965 },
+                    { 4, "D", "Hacksaw Ridge", 5, 2016 },
+                    { 5, "S", "Back to the Future 2", 3, 1989 },
+                    { 6, "R", "DeadPool and Wolverine", 5, 2024 },
+                    { 7, "H", "Saw", 5, 2004 }
                 });
 
             migrationBuilder.CreateIndex(

@@ -58,7 +58,7 @@ namespace Web_Server_Application_Final_Project.Migrations
                         new
                         {
                             CameraId = 1,
-                            Description = "A mirrorless- type camera. My most recent camera.",
+                            Description = "A mirrorless-type camera. My most recent camera.",
                             Name = "Nikon Z6",
                             Rating = 1,
                             Sensor = "24.5MP Full Frame",
@@ -67,7 +67,7 @@ namespace Web_Server_Application_Final_Project.Migrations
                         new
                         {
                             CameraId = 2,
-                            Description = "A Camera",
+                            Description = "A mirrorless-type camera. I have tested a few times.",
                             Name = "Nikon Z9",
                             Rating = 2,
                             Sensor = "45.7MP Full Frame",
@@ -147,6 +147,38 @@ namespace Web_Server_Application_Final_Project.Migrations
                             Rating = 5,
                             TypesId = "S",
                             Year = 2012
+                        },
+                        new
+                        {
+                            GameId = 4,
+                            Name = "HellDivers 2",
+                            Rating = 4,
+                            TypesId = "T",
+                            Year = 2024
+                        },
+                        new
+                        {
+                            GameId = 5,
+                            Name = "God of War",
+                            Rating = 5,
+                            TypesId = "R",
+                            Year = 2018
+                        },
+                        new
+                        {
+                            GameId = 6,
+                            Name = "Infamous",
+                            Rating = 4,
+                            TypesId = "T",
+                            Year = 2010
+                        },
+                        new
+                        {
+                            GameId = 7,
+                            Name = "The Last of Us",
+                            Rating = 4,
+                            TypesId = "R",
+                            Year = 2014
                         });
                 });
 
@@ -369,7 +401,7 @@ namespace Web_Server_Application_Final_Project.Migrations
                             GenreId = "M",
                             Name = "The Sound of Music",
                             Rating = 5,
-                            Year = 2065
+                            Year = 1965
                         },
                         new
                         {
@@ -378,6 +410,30 @@ namespace Web_Server_Application_Final_Project.Migrations
                             Name = "Hacksaw Ridge",
                             Rating = 5,
                             Year = 2016
+                        },
+                        new
+                        {
+                            MovieId = 5,
+                            GenreId = "S",
+                            Name = "Back to the Future 2",
+                            Rating = 3,
+                            Year = 1989
+                        },
+                        new
+                        {
+                            MovieId = 6,
+                            GenreId = "R",
+                            Name = "DeadPool and Wolverine",
+                            Rating = 5,
+                            Year = 2024
+                        },
+                        new
+                        {
+                            MovieId = 7,
+                            GenreId = "H",
+                            Name = "Saw",
+                            Rating = 5,
+                            Year = 2004
                         });
                 });
 
