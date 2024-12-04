@@ -11,14 +11,11 @@ namespace Web_Server_Application_Final_Project.Controllers
      
 
         private FinalContext context { get; set; }
-		
 
 		public HomeController(FinalContext ctx)
 		{
 			context = ctx;
         }
-
-
 
 		public IActionResult Index()
 		{
