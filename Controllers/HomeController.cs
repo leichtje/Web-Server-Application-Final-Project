@@ -11,7 +11,6 @@ namespace Web_Server_Application_Final_Project.Controllers
      
 
         private FinalContext context { get; set; }
-		
 
 		public HomeController(FinalContext ctx)
 		{
@@ -63,11 +62,6 @@ namespace Web_Server_Application_Final_Project.Controllers
         {
             var locations = context.Locations.OrderBy(l => l.Rating).ToList();
             return View(locations);
-        }
-
-        public IActionResult True()
-        {
-            return Redirect("https://youtu.be/dQw4w9WgXcQ?si=jculv-4M5s6_TeZl");
         }
 
         public IActionResult False()
