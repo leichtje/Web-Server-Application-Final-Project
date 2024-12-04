@@ -18,8 +18,6 @@ namespace Web_Server_Application_Final_Project.Controllers
 			context = ctx;
         }
 
-
-
 		public IActionResult Index()
 		{
             ViewData["Title"] = "Home Page";
@@ -49,6 +47,9 @@ namespace Web_Server_Application_Final_Project.Controllers
 			return View(movies);
 		}
 
+       
+
+
         public IActionResult VideoGames()
         {
 			var games = context.Games.Include(m => m.Type).OrderBy(
@@ -56,6 +57,7 @@ namespace Web_Server_Application_Final_Project.Controllers
 			return View(games);
 
 		}
+
 
         public IActionResult Place()
         {

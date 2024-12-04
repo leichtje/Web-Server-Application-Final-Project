@@ -29,6 +29,7 @@
 		</pre>
 
 		<h2>Camera List</h2>
+		<a class="btn-content col nav-link" asp-controller="Camera" asp-action="Add">Add New Camera</a>
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
@@ -37,6 +38,7 @@
 					<th>Sensor</th>
 					<th>Description</th>
 					<th>Rating</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -48,6 +50,14 @@
 						<td>@camera.Sensor</td>
 						<td>@camera.Description</td>
 						<td>@camera.Rating</td>
+						<td>
+							<a asp-controller="camera" asp-action="Edit"
+							   asp-route-id="@camera.CameraId"
+							   asp-route-slug="@camera.Slug">Edit</a>
+							<a asp-controller="camera" asp-action="Delete"
+							   asp-route-id="@camera.CameraId"
+							   asp-route-slug="@camera.Slug">Delete</a>
+						</td>
 					</tr>
 					}
 				</tbody>
